@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<link rel="stylesheet" href="css/app.min.css" />
+	<title>Voyage Travel Agency</title>
+</head>
+
+<body>
+	<header class="flex">
+		<nav class="nav-header flex">
+			<div class="nav-brand">
+				<a href="index.html" class="nav-brand-link link">
+					<img class="nav-brand-logo" src="img/dest/logo.png" alt="voyage-logo">
+				</a>
+			</div>
+			<ul class="navbar flex">
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">
+						<i class="fas fa-map-marker-alt navbar-link-icon"></i>Locations
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">
+						<i class="fas fa-plane navbar-link-icon"></i>Flights
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">
+						<i class="fas fa-hotel navbar-link-icon"></i>Hotels
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">
+						<i class="fas fa-bolt navbar-link-icon"></i>Activities
+					</a>
+				</li>
+			</ul>
+			<ul class="nav-buttons flex">
+				<li class="nav-buttons-item">
+					<a href="#" class="nav-button link" id="support-btn">Support</a>
+				</li>
+				<li class="nav-buttons-item">
+					<a href="#" class="nav-button btn link" id="sign_in-btn">Sign in</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="header-content grid">
+			<div class="search_bar flex">
+				<h1 class="search_bar-heading flex">
+					<span class="search_bar-heading-1">Let&rsquo;s make a&nbsp;tour</span>
+					<span class="search_bar-heading-2">Discover the beauty</span>
+				</h1>
+				<div class="search_bar-nav flex">
+					<i class="fas fa-map-marker-alt search_bar-nav-icon active"></i>
+					<i class="fas fa-plane search_bar-nav-icon"></i>
+					<i class="fas fa-hotel search_bar-nav-icon"></i>
+				</div>
+				<form action="#" class="search_bar-form grid">
+
+					<input type="text" name="from" id="search_bar-form-departure_place" placeholder="From where" />
+
+
+					<input type="date" name="departure_date" id="search_bar-form-departure_date" />
+					<input type="text" name="to" id="search_bar-form-arrive_place" placeholder="To where" />
+
+					<input type="date" name="arrive_date" id="search_bar-form-arrive_date" />
+
+					<select id="number_of_persons_choice">
+						<option label="1 Person"></option>
+						<option label="2 Persons"></option>
+						<option label="3 Persons"></option>
+						<option label="4 Persons"></option>
+						<option label="5 Persons"></option>
+						<option label="6 Persons"></option>
+						<option label="7 Persons"></option>
+						<option label="8 Persons"></option>
+						<option label="9 Persons"></option>
+						<option label="10 Persons"></option>
+					</select>
+
+					<input type="submit" class="btn" id="search_bar-form-submit-btn" value="Search Packages">
+				</form>
+			</div>
+			<div class="bg_img1"></div>
+			<div class="bg_img2"></div>
+			<div class="advantages flex">
+				<div class="advantages-item flex">
+					<svg class="advantages-item-icon" width="51" height="51" viewBox="0 0 51 51">
+						<path d=" M37.6403 21.7424C53.0703 5.95735 51.3947 1.64455 50.3859 0.63424C49.3772 -0.376067 44.9716 -2.15413
+						29.2116 13.3003L10.4964 5.80137C9.94255 5.57926 9.30924 5.70941 8.88633 6.13299L4.66168 10.3643C3.96663
+						11.0605 4.1151 12.2299 4.99277 12.731L21.1345 21.7124C17.4368 25.7794 14.062 29.7877 11.4732
+						33.1989H3.60517C3.20915 33.1989 2.82936 33.3564 2.54935 33.6369L0.437027 35.7525C0.0708823 36.1193
+						-0.0786823 36.6493 0.0399139 37.1544C0.157514 37.6565 0.529833 38.0645 1.02075 38.2299L6.88125
+						40.1864C6.15514 41.6947 5.77146 43.2112 6.77401 44.2153C7.77655 45.2194 9.29062 44.8351 10.7965
+						44.1079L12.75 49.9776C12.9125 50.4658 13.3183 50.842 13.8237 50.96C14.328 51.0788 14.8572 50.929 15.2233
+						50.5623L17.3356 48.4466C17.6156 48.1662 17.773 47.7858 17.773 47.3891V39.5086C21.1787 36.9157 25.1806
+						33.5356 29.2414 29.8321L38.2085 45.9993C38.7192 46.8934 39.8883 47.0151 40.5714 46.331L44.7962
+						42.0996C45.2191 41.6761 45.349 41.0418 45.1273 40.487L37.6403 21.7424Z" />
+					</svg>Visit the greatest places
+				</div>
+				<div class="advantages-item flex">
+					<svg class="advantages-item-icon" width="52" height="52" viewBox="0 0 52 52">
+						<path d=" M26 0C11.663 0 0 11.663 0 26C0 40.337 11.663 52 26 52C40.337 52 52 40.337 52 26C52 11.663 40.337 0 26
+						0ZM38.3652 39.4483C37.9427 39.8708 37.3881 40.0835 36.8335 40.0835C36.2788 40.0835 35.7238 39.8708 35.3017
+						39.4483L24.4682 28.6152C24.0608 28.2102 23.8335 27.6595 23.8335 27.0835V13C23.8335 11.8019 24.8039 10.8335
+						26 10.8335C27.1961 10.8335 28.1665 11.8019 28.1665 13V26.1865L38.3652 36.3848C39.2122 37.2322 39.2122
+						38.6013 38.3652 39.4483Z" />
+					</svg> Make your own plans.
+				</div>
+				<div class="advantages-item flex">
+					<svg class="advantages-item-icon" width="44" height="53" viewBox="0 0 44 53">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M24.0343 0.504592C25.0091 0.919445 25.7873 1.7961 40.7285 15.5441C42.452 17.1303 43.4413 19.3876 43.4412 21.7386V46.7313C43.4412 49.676 41.0575 52.0728 38.1279 52.0728H5.31326C2.38378 52.0728 0 49.676 0 46.7313V21.7386C0 19.3876 0.989203 17.1303 2.71388 15.5441L18.0523 1.43056C19.5909 0.0151715 21.8184 -0.373102 23.6903 0.369454C23.8197 0.419709 23.9282 0.459412 24.0343 0.504592ZM22.0845 8.745C21.1099 8.56208 20.2388 9.23655 20.1398 10.1863C20.0584 10.9875 20.5844 11.7703 21.4461 11.9501C22.3484 12.1195 23.1832 11.5542 23.3679 10.6668C23.5416 9.83378 23.0166 8.93935 22.0845 8.745ZM13.5519 19.1719C10.7127 19.1719 8.403 21.7376 8.403 24.8915C8.403 28.0454 10.7127 30.6121 13.5519 30.6121C16.392 30.6121 18.7017 28.0454 18.7017 24.8915C18.7017 21.7376 16.3921 19.1719 13.5519 19.1719ZM16.2657 40.0182C15.8106 41.1013 16.6165 42.2853 17.7713 42.2853C18.4108 42.2853 19.0166 41.9084 19.2791 41.283L27.2354 22.3226C27.5841 21.4903 27.193 20.5316 26.3606 20.1829C25.5283 19.8332 24.5707 20.2254 24.221 21.0577L16.2657 40.0182ZM24.8932 37.8557C24.8932 41.0096 27.2028 43.5752 30.0419 43.5752C32.8811 43.5752 35.1918 41.0096 35.1918 37.8557C35.1918 34.7018 32.8811 32.1351 30.0419 32.1351C27.2029 32.1351 24.8932 34.7018 24.8932 37.8557ZM13.5514 22.4402C12.5317 22.4402 11.6709 23.5634 11.6709 24.8915C11.6709 26.2206 12.5315 27.3438 13.5514 27.3438C14.5711 27.3438 15.4328 26.2206 15.4328 24.8915C15.4328 23.5634 14.5711 22.4402 13.5514 22.4402ZM30.0445 35.4034C29.0248 35.4034 28.1641 36.5266 28.1641 37.8557C28.1641 39.1837 29.0247 40.3069 30.0445 40.3069C31.0642 40.3069 31.9261 39.1837 31.9261 37.8557C31.9261 36.5266 31.0642 35.4034 30.0445 35.4034Z" />
+					</svg>
+					Save 50% on your next trip
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="flash_deals">
+		<h2 class="flash_deals-heading">Flash Deals</h2>
+		<div class="carousel flex">
+			<div class="carousel-content grid">
+				<div class="carousel-card flex" id="memorial_beach">
+					<div class="carousel-card-img"
+						style="background-image: url(img/dest/flash_deals/mermaid_beach.jpg);">
+						<div class="flash_deals_carousel_card_badges flex">
+							<div class="flash_deals_carousel_card_badges-item timer">
+								<i class="fas fa-clock badge-icon"></i>
+								<span class="badge-text">20: 04: 32: 21</span>
+							</div>
+							<div class="flash_deals_carousel_card_badges-item trending">
+								<i class="fas fa-bolt badge-icon"></i>
+								<span class="badge-text">Trending</span>
+								<i class="fas fa-bolt badge-icon"></i>
+							</div>
+						</div>
+					</div>
+					<h4 class="carousel-card-title">Mermaid Beach Resort: The most joyful way to spend your holiday
+					</h4>
+					<div class="additional_info">
+						<p class="additional_info-block location">
+							<i class="fas fa-map-marker-alt icon"></i>
+							Cox&rsquo;s Bazar
+						</p>
+						<p class="additional_info-block duration">
+							<i class="fas fa-calendar icon"></i>
+							4 days
+						</p>
+					</div>
+					<div class="carousel-card-price flex">
+						<span class="carousel-card-price-old">$200</span>
+						<div class="price_block">
+							<span class="price_block-value">$175</span>
+							<span class="price_block-condition">/ Per person</span>
+						</div>
+						<span class="carousel-card-price-discount">
+							<i class="fas fa-tag"></i>
+							-15%
+						</span>
+					</div>
+				</div>
+
+				<div class="carousel-card flex" id="bora_bora">
+					<div class="carousel-card-img" style="background-image: url(img/dest/flash_deals/bora_bora.jpg);">
+						<div class="flash_deals_carousel_card_badges flex">
+							<div class="flash_deals_carousel_card_badges-item timer">
+								<i class="fas fa-clock badge-icon"></i>
+								<span class="badge-text">18: 11: 26: 25</span>								
+							</div>
+							<div class="flash_deals_carousel_card_badges-item trending">
+								<i class="fas fa-bolt badge-icon"></i>
+								<span class="badge-text">Trending</span>								
+								<i class="fas fa-bolt badge-icon"></i>
+							</div>
+						</div>
+					</div>
+					<h4 class="carousel-card-title">Bora Bora: Enjoy a&nbsp;romantic cruise tour of&nbsp;at&nbsp;the
+						sunny side of&nbsp;life</h4>
+						<div class="additional_info">
+							<p class="additional_info-block location">
+								<i class="fas fa-map-marker-alt icon"></i>
+								Maldives
+							</p>
+							<p class="additional_info-block duration">
+								<i class="fas fa-calendar icon"></i>
+								4 days
+							</p>
+						</div>
+						<div class="carousel-card-price flex">
+							<span class="carousel-card-price-old">$300</span>
+							<div class="price_block">
+								<span class="price_block-value">$250</span>
+								<span class="price_blockl-condition">/ Per person</span>
+							</div>
+							<span class="carousel-card-price-discount">
+								<i class="fas fa-tag"></i>
+								-15%
+							</span>
+						</div>
+				</div>
+
+				<div class="carousel-card flex" id="fihalhohi_island">
+					<div class="carousel-card-img"
+						style="background-image: url(img/dest/flash_deals/fihalhohi_island.jpg);">
+						<div class="flash_deals_carousel_card_badges flex">
+							<div class="flash_deals_carousel_card_badges-item timer">
+								<i class="fas fa-clock badge-icon"></i>
+								<span class="badge-text">13: 09: 22: 13</span>
+							</div>
+							<div class="flash_deals_carousel_card_badges-item trending">
+								<i class="fas fa-bolt badge-icon"></i>
+								Trending
+								<i class="fas fa-bolt badge-icon"></i>
+							</div>
+						</div>
+					</div>
+					<h4 class="carousel-card-title">Fihalhohi Island Resort: Luxury destination without compromise
+					</h4>
+					<div class="additional_info">
+						<p class="additional_info-block location">
+							<i class="fas fa-map-marker-alt icon"></i>
+							Maldives
+						</p>
+						<p class="additional_info-block duration">
+							<i class="fas fa-calendar icon"></i>
+							4 days
+						</p>
+					</div>
+					<div class="carousel-card-price flex">
+						<span class="carousel-card-price-old">$375</span>
+						<div class="price_block">
+							<span class="price_block-value">$300</span>
+							<span class="price_block-condition">/ Per person</span>
+						</div>
+						<span class="carousel-card-price-discount">
+							<i class="fas fa-tag"></i>
+							-15%
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-arrows flex">
+				<i class="fas fa-angle-left btn carousel-arrows-left"></i>
+				<i class="fas fa-angle-right btn carousel-arrows-right"></i>
+			</div>
+			<div class="carousel-indicators">
+				<span class="carousel-indicators-item"></span>
+				<span class="carousel-indicators-item"></span>
+				<span class="carousel-indicators-item active"></span>
+				<span class="carousel-indicators-item"></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="popular_places grid">
+		<div class="description_block">
+			<i class="fas fa-map-marker-alt description_block-icon"></i>
+			<h3 class="description_block-title">Popular places</h3>
+			<p class="description_block-text">Enjoy the benefits of&nbsp;our packages to&nbsp;the sites where our visitors have more fun. Properly arranged with low costing.</p>
+		</div>
+
+		<div id="popular_place_1" class="grid_card" style="background-image: url(img/dest/destinations/agra.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Agra</h4>
+				<p class="additional_info-block"><i class="fas fa-gift icon"></i> 10&nbsp;Packages</p>
+			</div>
+		</div>
+		
+		<div id="popular_place_2" class="grid_card" style="background-image: url(img/dest/destinations/kuala_lumpur.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Kuala Lumpur</h4>
+				<p class="additional_info-block"><i class="fas fa-gift icon"></i> 10&nbsp;Packages</p>
+			</div>
+		</div>
+		
+		<div id="popular_place_3" class="grid_card" style="background-image: url(img/dest/destinations/munich.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Munich</h4>
+				<p class="additional_info-block"><i class="fas fa-gift icon"></i> 10&nbsp;Packages</p>
+			</div>
+		</div>
+
+		<div id="popular_place_4" class="grid_card" style="background-image: url(img/dest/destinations/paris.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Paris</h4>
+				<p class="additional_info-block"><i class="fas fa-gift icon"></i> 10&nbsp;Packages</p>
+			</div>
+		</div>
+		
+		<div id="popular_place_5" class="grid_card" style="background-image: url(img/dest/destinations/vienna.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Vienna</h4>
+				<p class="additional_info-block"><i class="fas fa-gift icon"></i> 10&nbsp;Packages</p>
+			</div>
+		</div>
+		
+		<div id="popular_place_6" class="grid_card" style="background-image: url(img/dest/destinations/prague.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Prague</h4>
+				<p class="additional_info-block"><i class="fas fa-gift icon"></i> 10&nbsp;Packages</p>
+			</div>
+		</div>
+
+		<div class="popular_places-details">
+			<p class="popular_places-details-text">Wanna travel to&nbsp;the most thrilling spot on&nbsp;the planet? We&rsquo;ve set a&nbsp;bunch of&nbsp;surprises for you.</p>
+			<div class="view_more btn">
+				<span class="view_more-text">Click to&nbsp;view more</span>
+				<svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="view_more-icon">
+					<path d="M15.2601 0.544035C14.7343 0.0177516 13.8811 0.0177516 13.3544 0.544035C12.8281 1.0699 12.8281 1.92347 13.3544 2.44975L23.5609 12.6562H1.44264C0.696188 12.6562 0.0907288 13.2616 0.0907288 14.0081C0.0907288 14.755 0.696188 15.36 1.44264 15.36H23.5473L13.3409 25.5664C13.0877 25.8188 12.9454 26.1622 12.9454 26.5195C12.9454 26.8773 13.0877 27.2198 13.3409 27.4726C13.5941 27.7279 13.9408 27.8693 14.3007 27.8646C14.6593 27.8629 15.0036 27.7224 15.2601 27.4726L27.7648 14.9684C28.0192 14.7135 28.1611 14.3676 28.1573 14.0081C28.1547 13.6495 28.0142 13.3065 27.7648 13.0487L15.2601 0.544035Z"/>
+				</svg>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="details post1 flex">
+		<div class="details-carousel flex">
+			<div class="details-carousel-item grid">
+				<div class="details-carousel-item-left_img" style="background-image: url(img/dest/backgrounds/dubai_bg-1.jpg);"></div>
+				<div class="details-carousel-item-top_img" style="background-image: url(img/dest/backgrounds/dubai_bg-2.jpg);"></div>
+				<div class="details-carousel-item-content">
+					<span class="details-carousel-item-content-subtitle">Share a&nbsp;trip&nbsp;to</span>
+					<h3 class="details-carousel-item-content-title">Dubai</h3>
+					<p class="details-carousel-item-content-text">Dubai, a&nbsp;city with many faces, is&nbsp;one of&nbsp;the world&rsquo;s most popular tourist destinations. The Burj Khalifa, the world&rsquo;s highest tower, is&nbsp;located here. The futuristic beauty of&nbsp;new buildings is&nbsp;at&nbsp;the heart of&nbsp;Dubai tourism.</p>
+					<div class="details-carousel-item-content-btn btn flex">
+						<span class="details-carousel-item-content-btn-text">Read More</span>
+						<svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="details-carousel-item-content-btn-icon">
+							<path d="M15.2601 0.544035C14.7343 0.0177516 13.8811 0.0177516 13.3544 0.544035C12.8281 1.0699 12.8281 1.92347 13.3544 2.44975L23.5609 12.6562H1.44264C0.696188 12.6562 0.0907288 13.2616 0.0907288 14.0081C0.0907288 14.755 0.696188 15.36 1.44264 15.36H23.5473L13.3409 25.5664C13.0877 25.8188 12.9454 26.1622 12.9454 26.5195C12.9454 26.8773 13.0877 27.2198 13.3409 27.4726C13.5941 27.7279 13.9408 27.8693 14.3007 27.8646C14.6593 27.8629 15.0036 27.7224 15.2601 27.4726L27.7648 14.9684C28.0192 14.7135 28.1611 14.3676 28.1573 14.0081C28.1547 13.6495 28.0142 13.3065 27.7648 13.0487L15.2601 0.544035Z"/>
+						</svg>
+					</div>					
+				</div>
+			</div>
+			<div class="details-carousel-indicators">
+				<span class="details-carousel-indicators-item"></span>
+				<span class="details-carousel-indicators-item"></span>
+				<span class="details-carousel-indicators-item active"></span>
+				<span class="details-carousel-indicators-item"></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="popular_packages grid">
+		<div id="popular_package_1" class="grid_card" style="background-image: url(img/dest/packages/sky_is_the_limit.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Sky Is&nbsp;The Limit</h4>
+				<div class="additional_info">
+					<p class="additional_info-block location">
+						<i class="fas fa-map-marker-alt icon"></i>
+						Manali
+					</p>
+					<p class="additional_info-block duration">
+						<i class="fas fa-calendar icon"></i>
+						4 days
+					</p>
+				</div>
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="popular_package_2" class="grid_card" style="background-image: url(img/dest/packages/beyond_the_blues.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Beyond the Blues</h4>
+				<div class="additional_info">
+					<p class="additional_info-block location">
+						<i class="fas fa-map-marker-alt icon"></i>
+						Maldives
+					</p>
+					<p class="additional_info-block duration">
+						<i class="fas fa-calendar icon"></i>
+						4 days
+					</p>
+				</div>
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="popular_package_3" class="grid_card" style="background-image: url(img/dest/packages/within_the_green.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Within The Green</h4>
+				<div class="additional_info">
+					<p class="additional_info-block location">
+						<i class="fas fa-map-marker-alt icon"></i>
+						Phillipines
+					</p>
+					<p class="additional_info-block duration">
+						<i class="fas fa-calendar icon"></i>
+						4 days
+					</p>
+				</div>
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="popular_package_4" class="grid_card" style="background-image: url(img/dest/packages/queens_gambit.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Queen’s Gambit</h4>
+				<div class="additional_info">
+					<p class="additional_info-block location">
+						<i class="fas fa-map-marker-alt icon"></i>
+						London
+					</p>
+					<p class="additional_info-block duration">
+						<i class="fas fa-calendar icon"></i>
+						4 days
+					</p>
+				</div>
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="popular_package_5" class="grid_card" style="background-image: url(img/dest/packages/city_of_canals.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">City of Canals</h4>
+				<div class="additional_info">
+					<p class="additional_info-block location">
+						<i class="fas fa-map-marker-alt icon"></i>
+						Venice
+					</p>
+					<p class="additional_info-block duration">
+						<i class="fas fa-calendar icon"></i>
+						4 days
+					</p>
+				</div>
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="popular_package_6" class="grid_card" style="background-image: url(img/dest/packages/mountain_venture.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Mountain Venture</h4>
+				<div class="additional_info">
+					<p class="additional_info-block location">
+						<i class="fas fa-map-marker-alt icon"></i>
+						Kathmundu
+					</p>
+					<p class="additional_info-block duration">
+						<i class="fas fa-calendar icon"></i>
+						4 days
+					</p>
+				</div>
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="description_block">
+			<i class="fas fa-gift description_block-icon"></i>
+			<h3 class="description_block-title">Popular Packages</h3>
+			<p class="description_block-text">Choose the most popular bundles among our current ones.</p>
+		</div>
+
+		<div class="popular_packages-details">
+			<p class="popular_packages-details-text">Most exclusive packages are ready for you. It&rsquo;s only a&nbsp;click away!</p>
+			<div class="view_more btn">
+				<span class="view_more-text">Click to&nbsp;view more</span>
+				<svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="view_more-icon">
+					<path d="M15.2601 0.544035C14.7343 0.0177516 13.8811 0.0177516 13.3544 0.544035C12.8281 1.0699 12.8281 1.92347 13.3544 2.44975L23.5609 12.6562H1.44264C0.696188 12.6562 0.0907288 13.2616 0.0907288 14.0081C0.0907288 14.755 0.696188 15.36 1.44264 15.36H23.5473L13.3409 25.5664C13.0877 25.8188 12.9454 26.1622 12.9454 26.5195C12.9454 26.8773 13.0877 27.2198 13.3409 27.4726C13.5941 27.7279 13.9408 27.8693 14.3007 27.8646C14.6593 27.8629 15.0036 27.7224 15.2601 27.4726L27.7648 14.9684C28.0192 14.7135 28.1611 14.3676 28.1573 14.0081C28.1547 13.6495 28.0142 13.3065 27.7648 13.0487L15.2601 0.544035Z"/>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<section class="details post2 flex">
+		<div class="details-carousel flex">
+			<div class="details-carousel-item grid">
+				<div class="details-carousel-item-top_img" style="background-image: url(img/dest/backgrounds/bungee_jumping_bg-1.jpg);"></div>
+				<div class="details-carousel-item-right_img" style="background-image: url(img/dest/backgrounds/bungee_jumping_bg-2.jpg);"></div>
+				<div class="details-carousel-item-content">
+					<span class="details-carousel-item-content-subtitle">Participate in&nbsp;activities like</span>
+					<h3 class="details-carousel-item-content-title">Bungee Jumping</h3>
+					<p class="details-carousel-item-content-text">Bungee jumping, often known as&nbsp;bungy jumping, is&nbsp;a&nbsp;sport in&nbsp;which a&nbsp;person jumps from a&nbsp;considerable height while attached to&nbsp;a&nbsp;long elastic line. Usually, the pad is&nbsp;built on&nbsp;a&nbsp;high structure like a&nbsp;structure or&nbsp;a&nbsp;crane, a&nbsp;bridge across a&nbsp;steep ravine</p>
+					<div class="details-carousel-item-content-btn btn flex">
+						<span class="details-carousel-item-content-btn-text">Read More</span>
+						<svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="details-carousel-item-content-btn-icon">
+							<path d="M15.2601 0.544035C14.7343 0.0177516 13.8811 0.0177516 13.3544 0.544035C12.8281 1.0699 12.8281 1.92347 13.3544 2.44975L23.5609 12.6562H1.44264C0.696188 12.6562 0.0907288 13.2616 0.0907288 14.0081C0.0907288 14.755 0.696188 15.36 1.44264 15.36H23.5473L13.3409 25.5664C13.0877 25.8188 12.9454 26.1622 12.9454 26.5195C12.9454 26.8773 13.0877 27.2198 13.3409 27.4726C13.5941 27.7279 13.9408 27.8693 14.3007 27.8646C14.6593 27.8629 15.0036 27.7224 15.2601 27.4726L27.7648 14.9684C28.0192 14.7135 28.1611 14.3676 28.1573 14.0081C28.1547 13.6495 28.0142 13.3065 27.7648 13.0487L15.2601 0.544035Z"/>
+						</svg>
+					</div>					
+				</div>
+			</div>
+			<div class="details-carousel-indicators">
+				<span class="details-carousel-indicators-item"></span>
+				<span class="details-carousel-indicators-item"></span>
+				<span class="details-carousel-indicators-item active"></span>
+				<span class="details-carousel-indicators-item"></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="hotels grid">
+		<div class="description_block">
+			<i class="fas fa-hotel description_block-icon"></i>
+			<h3 class="description_block-title">Discover our best hotels to&nbsp;stay</h3>
+			<p class="description_block-text">Bundle tickets to&nbsp;any hotel to&nbsp;save on&nbsp;your whole order. Follow bundle&nbsp;it! method by&nbsp;picking the right hotel accommodation once you add your tickets to&nbsp;your cart.</p>
+		</div>
+
+		<div id="hotel_1" class="grid_card" style="background-image: url(img/dest/hotels/moon_house_hostel.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Moon House Hostel</h4>
+				<p class="additional_info-block location">
+					<i class="fas fa-map-marker-alt icon"></i>
+					Soi Petchburi&nbsp;19, Bangkok
+				</p>					
+				<div class="price_block">
+					<span class="price_block-value">$175</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="hotel_2" class="grid_card" style="background-image: url(img/dest/hotels/blue_mosque_hotel.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Blue Mosque Hotel</h4>
+				<p class="additional_info-block location">
+					<i class="fas fa-map-marker-alt icon"></i>
+					Dismesi Sokak, Istanbul
+				</p>					
+				<div class="price_block">
+					<span class="price_block-value">$150</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="hotel_3" class="grid_card" style="background-image: url(img/dest/hotels/hotel_royal.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">Hotel Royal</h4>
+				<p class="additional_info-block location">
+					<i class="fas fa-map-marker-alt icon"></i>
+					Kedewatan, Bali
+				</p>					
+				<div class="price_block">
+					<span class="price_block-value">$200</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="hotel_4" class="grid_card" style="background-image: url(img/dest/hotels/rin_boutique_hotel.jpg);">
+			<div class="grid_card-content">
+				<h4 class="grid_card-content-title">The Rin Boutique Hotel</h4>
+				<p class="additional_info-block location">
+					<i class="fas fa-map-marker-alt icon"></i>
+					Bang Lamung, Pattaya
+				</p>					
+				<div class="price_block">
+					<span class="price_block-value">$250</span>
+					<span class="price_block-condition">/ Per person</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="hotels-details">
+			<p class="hotels-details-text">In&nbsp;our offers, we&nbsp;have more hotels. Just to&nbsp;make your stay easy for your best interests.</p>
+			<div class="view_more btn">
+				<span class="view_more-text">Click to&nbsp;view more</span>
+				<svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="view_more-icon">
+					<path d="M15.2601 0.544035C14.7343 0.0177516 13.8811 0.0177516 13.3544 0.544035C12.8281 1.0699 12.8281 1.92347 13.3544 2.44975L23.5609 12.6562H1.44264C0.696188 12.6562 0.0907288 13.2616 0.0907288 14.0081C0.0907288 14.755 0.696188 15.36 1.44264 15.36H23.5473L13.3409 25.5664C13.0877 25.8188 12.9454 26.1622 12.9454 26.5195C12.9454 26.8773 13.0877 27.2198 13.3409 27.4726C13.5941 27.7279 13.9408 27.8693 14.3007 27.8646C14.6593 27.8629 15.0036 27.7224 15.2601 27.4726L27.7648 14.9684C28.0192 14.7135 28.1611 14.3676 28.1573 14.0081C28.1547 13.6495 28.0142 13.3065 27.7648 13.0487L15.2601 0.544035Z"/>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<section class="travel_blogs">
+		<h2 class="travel_blogs-heading">Travel Blogs</h2>
+		<div class="carousel flex">
+			<div class="carousel-content grid">
+				<div class="carousel-card post flex" id="post_1">
+					<div class="carousel-card-img post-img"
+						style="background-image: url(img/dest/blog_images/blog_article_img-1.jpg);">
+						<figure class="author">
+							<img class="author-avatar" src="img/dest/avatars/john_oliver_ava.jpg"
+									 alt="John Oliver">
+							<figcaption class="author-info flex">
+								<p class="author-name">John Oliver</p>
+								<p class="read_duration">5&nbsp;Mins Read</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="post-info flex">
+						<div class="post-statistic flex">
+							<span class="post-statistic-item flex likes">
+								<i class="fas fa-heart icon"></i>
+								244
+							</span>
+							<span class="post-statistic-item flex views">
+								<i class="fas fa-eye icon"></i>
+								244
+							</span>
+							<span class="post-statistic-item flex share">
+								<i class="fas fa-share icon"></i>
+								244
+							</span>
+						</div>
+						<div class="post-description flex">
+							<h4 class="post-description-title">15&nbsp;Best Day Trips from Portland Oregon
+							</h4>
+							<p class="post-description-text">The structure of&nbsp;the trip blog is&nbsp;only a&nbsp;white canvas to&nbsp;highlight the atmospheric and immersive.</p>
+						</div>
+						<i class="fas fa-arrow-right icon"></i>
+					</div>
+				</div>
+
+				<div class="carousel-card post flex" id="post_2">
+					<div class="carousel-card-img post-img"
+						style="background-image: url(img/dest/blog_images/blog_article_img-2.jpg);">
+						<figure class="author">
+							<img class="author-avatar" src="img/dest/avatars/haley_wilson_ava.jpg"
+									 alt="Haley Wilson">
+							<figcaption class="author-info flex">
+								<p class="author-name">Haley Wilson</p>
+								<p class="read_duration">5&nbsp;Mins Read</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="post-info flex">
+						<div class="post-statistic flex">
+							<span class="post-statistic-item flex likes">
+								<i class="fas fa-heart icon"></i>
+								244
+							</span>
+							<span class="post-statistic-item flex views">
+								<i class="fas fa-eye icon"></i>
+								244
+							</span>
+							<span class="post-statistic-item flex share">
+								<i class="fas fa-share icon"></i>
+								244
+							</span>
+						</div>
+						<div class="post-description flex">
+							<h4 class="post-description-title">Famous Roads for Great Drives in&nbsp;California
+							</h4>
+							<p class="post-description-text">I&nbsp;first discovered about famous road in&nbsp;california when&nbsp;I flew with KLM to&nbsp;Europe in&nbsp;2018.</p>
+						</div>
+						<i class="fas fa-arrow-right icon"></i>
+					</div>
+				</div>
+
+				<div class="carousel-card post flex" id="post_3">
+					<div class="carousel-card-img post-img"
+						style="background-image: url(img/dest/blog_images/blog_article_img-3.jpg);">
+						<figure class="author">
+							<img class="author-avatar" src="img/dest/avatars/jeff_baley_ava.jpg"
+									 alt="Jeff Baley">
+							<figcaption class="author-info flex">
+								<p class="author-name">Jeff Baley</p>
+								<p class="read_duration">5&nbsp;Mins Read</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="post-info flex">
+						<div class="post-statistic flex">
+							<span class="post-statistic-item flex likes">
+								<i class="fas fa-heart icon"></i>
+								244
+							</span>
+							<span class="post-statistic-item flex views">
+								<i class="fas fa-eye icon"></i>
+								244
+							</span>
+							<span class="post-statistic-item flex share">
+								<i class="fas fa-share icon"></i>
+								244
+							</span>
+						</div>
+						<div class="post-description flex">
+							<h4 class="post-description-title">7&nbsp;of&nbsp;the Best Train Trips in&nbsp;Canada
+							</h4>
+							<p class="post-description-text">On&nbsp;this very stunning rail ride from Vancouver to&nbsp;Calgary, take in&nbsp;the stunning vistas andspectacular.</p>
+						</div>
+						<i class="fas fa-arrow-right icon"></i>
+					</div>
+				</div>
+
+			</div>
+			<div class="carousel-arrows flex">
+				<i class="fas fa-angle-left btn carousel-arrows-left"></i>
+				<i class="fas fa-angle-right btn carousel-arrows-right"></i>
+			</div>
+		</div>
+	</section>
+
+	<section class="flights flex">
+		<h2 class="flights-heading">Flights to&nbsp;Popular Places at&nbsp;the Best Costs</h2>
+		<div class="flights-set grid">
+			<div id="flight_1" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Chittagong</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_2" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Sylhet</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_3" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Chittagong</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_4" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Chittagong</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_5" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Cox&rsquo;s Bazar</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_6" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Chittagong</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_7" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Cox&rsquo;s Bazar</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_8" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Chittagong</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_9" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Cox&rsquo;s Bazar</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_10" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Chittagong</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>
+			</div>
+
+			<div id="flight_11" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Sylhet</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>				
+			</div>
+
+			<div id="flight_12" class="flights-set-item">
+				<div class="flights-set-item-content flex">
+					<div class="flights-set-item-content-text flex">
+						<p class="flights-set-item-content-text-direction">Dhaka&nbsp;&mdash; Cox&rsquo;s Bazar</p>
+						<p class="flights-set-item-content-text-price">
+							From
+							<span class="flights-set-item-content-text-price-value">$100</span>
+						</p>
+					</div>
+					<i class="fas fa-arrow-right icon"></i>
+				</div>				
+			</div>
+		</div>
+	</section>
+
+	<section class="get_app grid">
+		<div class="get_app-content grid">
+				<h3 class="get_app-content-heading">Get the app</h3>
+				<img class="get_app-content-btn" id="btn-buy_apple" src="img/dest/app_store.png" alt="Buy in App Store">
+				<img class="get_app-content-btn" id="btn-buy_google" src="img/dest/goole_play.png" alt="Buy in Goole Play">
+		</div>
+		<div class="get_app-bg_phone"></div>
+		<div class="get_app-bg1"></div>
+		<div class="get_app-bg2"></div>
+		<div class="get_app-bg3"></div>
+		<div class="get_app-bg4"></div>
+		<div class="get_app-bg5"></div>
+		<div class="get_app-bg6"></div>
+	</section>
+
+	<footer class="grid">
+		<nav class="nav-footer flex">
+			<a href="" class="nav-brand-link link">
+				<img class="nav-brand-logo" src="img/dest/logo.png" alt="voyage-logo">
+			</a>
+			<ul class="navbar flex">
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">News</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">Terms &amp;&nbsp;Conditions</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">Privacy</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">About&nbsp;Us</a>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="navbar-link link flex">FAQs</a>
+				</li>
+			</ul>
+		</nav>
+		<address class="flex">
+			<div class="contacts flex">
+				<span class="contacts-item flex">
+					<i class="fas fa-phone-alt"></i>+9390219390
+				</span>
+				<span class="contacts-item flex">
+					<i class="fas fa-envelope"></i>something@email.com
+				</span>
+				<span class="contacts-item flex">
+					<i class="fas fa-map-marker-alt"></i>333, Lorem Street, Albania, California, United States of&nbsp;America
+				</span>
+			</div>
+			<div class="social flex">
+				<a href="#" class="social-item btn flex">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="#" class="social-item btn flex">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="#" class="social-item btn flex">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</div>
+		</address>		
+	</footer>
+	
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

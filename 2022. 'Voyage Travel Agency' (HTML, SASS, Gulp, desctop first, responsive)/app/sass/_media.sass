@@ -1,0 +1,594 @@
+@import "vars"
+
+@media only screen and (max-width : 1400px)
+
+	.description_block
+		padding: $main_gutter_xl
+		&-icon
+			margin-bottom: 35px
+
+	.grid_card
+		&-content
+			padding: $main_gutter_xl
+
+	header
+		.nav-header
+			width: 100%
+			max-width: unset
+			padding: 0 50px
+
+		.header-content
+			max-width: 100vw
+			grid-template-columns: repeat(2, minmax(50vw, 700px))
+			grid-template-areas: "search_bar bg_img1" "bg_img2 advantages"
+
+			.search_bar
+				width: 50vw
+				padding: 60px 50px 70px
+
+			.bg_img2
+				background-position: left 30% center
+
+			.advantages
+				gap: $main_gutter_xl
+				padding: 7.5% 70px
+
+	.flash_deals
+		padding: $section_gutter_y_xl 50px
+
+		.carousel
+			width: 100%
+
+			&-content
+				width: 100%
+				padding: 0 70px
+				max-width: unset
+				grid-template-columns: repeat(3, 1fr)
+
+				.carousel-card
+					gap: 18px
+
+					&-img
+						.flash_deals_carousel_card_badges							
+							top: $main_gutter_xl
+							left: $main_gutter_xl
+
+			&-arrows
+				width: calc( 100vw - 100px )
+				padding: 0
+	
+	.popular_places
+		width: 100%
+		max-width: unset
+		grid-template-columns: 42px repeat(3, 1fr) 42px
+
+		&::before
+			grid-column: 2/3	
+			@include before_color_bg($accent1_gradient)
+
+		&::after
+			background: none
+
+		.popular_places-details
+			gap: 50px
+
+		.description_block
+			padding-left: $main_gutter_xl
+
+	.details
+		padding:
+			top: $section_gutter_y_xl
+			bottom: $section_gutter_y_xl
+
+		&-carousel
+			position: relative
+			width: 100%
+			max-width: 100vw
+
+			&-item
+				min-height: 700px
+				max-height: 834px
+				grid-template-columns: 50px repeat(3, 1fr) 50px
+
+				&-top_img
+					grid-column: 3/-1
+	
+	.popular_packages
+		width: 100%
+		max-width: unset
+		grid-template-columns: 42px repeat(3, 1fr) 42px
+
+		&::before
+			@include before_color_bg($accent1_gradient)
+			grid-column: 4/5
+
+		&::after
+			background: none
+
+		.description_block
+			padding-right: $main_gutter_xl
+
+		.popular_packages-details
+			gap: 30px
+
+	.post2
+		.details-carousel-item
+			&-top_img
+				grid-column: 1/4
+
+			&-right_img
+				grid-column: 4/-1
+
+			&-content
+				padding-top: 60px
+
+	.hotels
+		max-width: 100vw
+		grid-template-columns: 42px repeat(3, 1fr) 42px		
+		grid-template-areas: ". description card1 card2 ." ". description card3 card4 ." ". view_more view_more . ."
+		align-content: start
+		grid-gap: $little_gap		
+
+		.hotels-details
+			padding: $main_gutter_xl
+
+	.travel_blogs
+		padding: $section_gutter_y_xl 50px
+
+		.carousel
+			width: 100%
+
+			&-content
+				width: 100%
+				padding: 0 70px
+				max-width: unset
+				grid-template-columns: repeat(3, 1fr)
+
+				.carousel-card
+					gap: 0
+
+					&-img
+
+						.author
+							width: calc(100% - $main_gutter_xl * 2)
+							left: $main_gutter_xl
+							right: $main_gutter_xl
+
+				.post
+
+					&-info
+						padding: 25px $main_gutter_xl 15px					
+
+					&-description
+						padding: 24px 10px 20px
+						gap: 20px
+							
+						&-text
+							height: 90px
+
+			&-arrows
+				width: calc( 100vw - 100px )
+				padding: 0
+
+	.flights
+		gap: 50px
+
+		&-set
+			max-width: 100vw
+			grid-template-columns: repeat(6, 1fr)
+
+			&-item-content
+				padding: 20% 20px
+
+				&-text
+					gap: .5vw
+
+					&-direction
+						font-size: 1.35vw
+
+					&-price
+						font-size: 1.15vw
+
+				.icon
+					font-size: 1.8vw
+					line-height: 2.3vw
+
+	.get_app		
+		min-height: unset
+		max-height: unset
+		max-width: 100vw
+		grid-template-columns: minmax(50px , auto) 215px 81px 148px 148px 296px minmax(50px , auto)
+		grid-template-rows: 70px 150px 350px 236px
+		position: relative
+					
+		&-content			
+			grid-column-gap: 10px
+			grid-row-gap: 25px
+			padding: $main_gutter_xl calc($main_gutter_xl + 100px) 0 $main_gutter_xl
+
+			&-heading
+				font-size: 4.3rem
+				line-height: 6rem
+
+			&-btn
+				max-width: 136px
+
+		&-bg_phone
+			background-position: right center
+
+		&-bg1,
+		&-bg4
+			background-size: auto 100% 
+			background-position: right 100px bottom 0
+
+		&-bg3,
+		&-bg6
+			width: unset
+			position: absolute
+			top: 0
+			right: 100px
+			bottom: 0
+			left: 0
+
+	footer
+		max-width: 100vw
+		grid-template-columns: auto repeat(2, 444px) auto
+
+		.nav-footer
+			gap: $main_gutter_xl
+			padding: 95px 50px 95px 0
+
+		address
+			gap: 50px
+			padding: 95px 100px 95px 70px
+			
+			.contacts
+				gap: 15px
+				width: 100%
+
+@media only screen and (max-width : 1200px)
+
+	.description_block
+		padding: $main_gutter_l
+		&-icon
+			margin-bottom: 30px
+
+	.grid_card
+		&-content
+			padding: $main_gutter_l
+
+	.view_more
+		display: flex
+		justify-content: space-between
+		align-items: center
+		
+		&-text
+			@include text_subheading($light)
+
+		&-icon
+			width: 56px
+			height: 56px
+
+	header
+		.nav-header
+			padding: 0 30px
+
+		.header-content
+			grid-template-columns: repeat(2, minmax(50vw, 600px))
+
+			.search_bar
+				width: 50vw
+				padding: 40px 30px 50px
+
+				&-heading
+					&-1
+						font-size: 4.2rem
+						line-height: 5.8rem
+
+					&-2
+						font-size: 4.2rem
+						line-height: 5.8rem
+
+				&-nav
+					margin-top: 5%
+
+				&-form
+					grid-template-columns: repeat(2, 47%)
+					gap: 22px
+
+					#number_of_persons_choice
+						margin:
+							top: 24px
+							bottom: 28px
+
+			.advantages
+				gap: $main_gutter_l
+				padding: 7.5% 50px
+
+				&-item
+					font-size: 1.7rem
+
+					&-icon
+						width: 42px
+						height: 42px
+
+	.flash_deals
+		padding: $section_gutter_y_l 30px
+
+		.carousel
+
+			&-content
+				padding: 0 50px
+				grid-gap: 5px
+
+				.carousel-card
+					gap: 15px
+
+					&-img
+						.flash_deals_carousel_card_badges
+							top: $main_gutter_l
+							left: $main_gutter_l
+
+							&-item
+								font-size: 1.2rem
+
+							.timer
+								.badge-text
+									margin-left: 6px
+
+							.trending
+								.badge-text
+									margin: 0 5px
+
+			&-arrows
+				width: calc( 100vw - 60px )
+
+	.popular_places
+		grid-template-columns: 25px repeat(3, 1fr) 25px
+		grid-gap: 5px
+
+		.popular_places-details
+			gap: 40px
+			padding: $main_gutter_l
+
+			.popular_places-details-text,
+			.view_more
+				max-width: 255px
+
+		.description_block
+			padding-left: $main_gutter_l
+
+	.details
+		padding:
+			top: $section_gutter_y_l
+			bottom: $section_gutter_y_l
+
+		&-carousel
+			&-item
+				grid-template-columns: 30px repeat(3, 1fr) 30px
+				min-height: 600px
+				max-height: 750px
+
+				&-content
+					padding:
+						top: 45px
+						bottom: 80px
+						left: 10%
+
+	.popular_packages
+		grid-template-columns: 25px repeat(3, 1fr) 25px
+		grid-gap: 5px
+
+		.description_block
+			padding-right: $main_gutter_l		
+		
+		.popular_packages-details
+			&-text,
+			.view_more
+				width: 255px
+
+	.post2
+		.details-carousel-item
+			&-top_img
+				grid-column: 1/4
+
+			&-right_img
+				grid-column: 4/-1
+
+			&-content
+				padding:
+					top: 45px
+					right: 10%
+
+	.hotels
+		grid-template-columns: 25px repeat(3, 1fr) 25px
+		grid-gap: 5px
+
+		.hotels-details
+			padding: 40px $main_gutter_l
+			justify-content: space-between
+			gap: unset
+
+			&-text,
+			.view_more
+				width: 255px
+
+	.travel_blogs
+		padding: $section_gutter_y_l 30px
+
+		.carousel
+			&-content
+				padding: 0 50px
+				grid-gap: 5px
+
+				.carousel-card
+					&-img
+						.author
+							width: calc(100% - $main_gutter_l * 2)
+							left: $main_gutter_l
+							right: $main_gutter_l
+
+				.post
+					&-info
+						padding: 20px $main_gutter_l 15px
+
+						.icon
+							margin-top: 0
+
+					&-description
+						padding: 24px 0 20px
+						gap: 16px
+
+						&-title
+							font-size: 1.8rem
+
+			&-arrows
+				width: calc( 100vw - 60px )
+
+	.flights
+
+		&-set
+			grid-template-columns: repeat(4, 1fr)
+			grid-template-rows: repeat(3, 13vw)
+			grid-auto-flow: column
+
+			&-item-content
+				padding: 25px 20px
+				justify-content: space-between
+
+				&-text
+					padding-bottom: 0
+					gap: .5vw
+
+					&-direction
+						font-size: 1.7vw
+						line-height: 2vw
+
+					&-price
+						font-size: 1.5vw
+						line-height: 1.8vw
+
+				.icon
+					font-size: 1.8vw
+					line-height: 2.3vw
+
+
+@media only screen and (max-width : 992px)
+
+	.link
+		font-size: 1.4rem
+
+	header
+		min-height: unset
+
+		.nav-header
+			height: $nav_header_height_md
+
+			.navbar
+				gap: 20px
+
+				&-link
+					font-size: 1.4rem
+
+					&-icon
+						font-size: 1.8rem
+
+			.nav-buttons
+				.nav-button
+					padding: 5px 8px
+					font-size: 1.4rem
+	
+	header		
+		.header-content
+			grid-template-columns: 30px repeat(2, 1fr) 30px
+			grid-template-areas: ". search_bar search_bar ." "bg_img1 bg_img1 advantages advantages"
+
+			.search_bar
+				grid-area: search_bar
+				width: 100%
+				padding: 20px 0
+
+				&-heading
+					&-1,
+					&-2
+						font-size: 4.9rem
+						line-height: 5.4rem
+
+				&-nav
+					margin:
+						top: 10px
+						bottom: 20px
+
+				&-form
+					grid-template-columns: repeat(2, 1fr)
+					grid-column-gap: 30px
+					grid-row-gap: 20px
+
+					#number_of_persons_choice
+						margin:
+							top: 15px
+						
+			.advantages
+				gap: 20px
+				padding: 7.5% 30px
+
+				&-item
+					font-size: 1.7rem
+
+					&-icon
+						width: 38px
+						height: 38px
+
+	.flash_deals
+		padding: $section_gutter_y_md 30px
+		gap:30px
+
+		.carousel
+
+			&-content
+
+				.carousel-card
+					gap: 12px
+
+					&-img
+						.flash_deals_carousel_card_badges
+							flex-direction: column
+							top: $main_gutter_l
+							left: $main_gutter_l
+
+							&-item
+								font-size: 1.2rem
+
+							.timer
+								.badge-text
+									margin-left: 6px
+
+							.trending
+								.badge-text
+									margin: 0 5px
+
+			&-arrows
+				width: calc( 100vw - 60px )
+
+	.popular_places,
+	.details,
+	.popular_packages,
+	.post2,
+	.hotels,
+	.travel_blogs,
+	.flights,
+	.get_app,
+	footer
+		display: none !important
+
+@media only screen and (max-width : 768px)
+	/**/
+
+
+@media only screen and (max-width : 480px)
+	/**/
+
+
+@media only screen and (max-width : 320px)
+	/**/
+
