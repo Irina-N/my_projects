@@ -30,13 +30,13 @@ export const Dices = () => {
 						Roll dices
 				</Button>
 			</Col>
-			{ Object.keys(dices).length > 0 ? (
-					<Col className='d-flex justify-content-center align-items-center pe-3 mb-4' xs={12} sm={'auto'} >
-						{Object.keys(dices).map(diceName => {
-							return <Dice key={diceName} value={dices[diceName]}></Dice>
-						})}
-					</Col>
-				) : ('')
+			{ 
+				Object.keys(dices).length > 0 && 
+				<Col className='d-flex justify-content-center align-items-center pe-3 mb-4' xs={12} sm={'auto'} >
+					{Object.keys(dices).map(diceName => {
+						return <Dice key={diceName} value={dices[diceName]}></Dice>
+					})}
+				</Col>
 			}
 			<Col xs={12} sm={'auto'} className='d-flex justify-content-center ps-4 pe-4'>
 				<History/>
