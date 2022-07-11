@@ -2,14 +2,3 @@
   text-align: center;
 }
 
-.gameField {
-	width: 100vw;
-}
-
-.btnCol{
-	height: 50px;
-}
-
-.rollDices {
-	width: fit-content;
-}
