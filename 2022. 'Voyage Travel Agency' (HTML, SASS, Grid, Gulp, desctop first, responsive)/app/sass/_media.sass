@@ -557,9 +557,9 @@
 		.header-content
 			grid-template-columns: 30px repeat(2, 1fr) 30px
 			grid-template-areas: ". search_bar search_bar ." "bg_img1 bg_img1 advantages advantages"
+			height: calc(100% - $nav_header_height_md)
 
 			.search_bar
-				grid-area: search_bar
 				width: 100%
 				padding: 0 0 20px
 
@@ -920,31 +920,34 @@
 			padding: 8px
 
 	header
-		min-height: unset
-
+		
 		.nav-header
 			height: $nav_header_height_s
 			width: 100vw
 			position: sticky
 			top: 0
-			padding: 0 15px
+			padding: 0 $main_gutter_s
 			justify-content: flex-end
 			background-color: #fff
 
 			.nav-brand
 				margin-right: auto
 
+				&-logo
+					width: 14rem!important
+					height: 3.5rem!important
+
 			.navbar
 				position: absolute
-				width: 205px
+				width: fit-content
 				top: $nav_header_height_s
 				right: 0
-				padding: 15px 0 20px
+				padding: 0 0 $main_gutter_s
 				flex-direction: column
 				align-items: flex-start
 				gap: 5px
 				z-index: 10
-				background-color: #fff				
+				background-color: #fff
 				visibility: hidden
 
 				&-item
@@ -955,77 +958,68 @@
 						background-color: rgba($accent1, .1)
 
 					.navbar-link
-						font-size: 2rem
+						font-size: 1.7rem
 						line-height: 2
 						display: flex
+						flex-direction: row-reverse
 
 						&-icon
-							font-size: 2rem
+							font-size: 1,7rem
 							line-height: 1.2
-							margin-right: 10px
+							margin:
+								left: 10px
+								right:0
 							width: 3rem
 							text-align: center
 
 			.nav-buttons
+				height: 3.5rem
+
 				.nav-button
-					padding: 5px 8px
-					font-size: 1.4rem
+					font-size: 1.7rem
 			
 			#nav-toggle
 				display: block
-				padding: 3px 8px 0
+				padding: 3px 0 0 8px
 				margin-left: 8px
+
 				.link
 					font-size: 2rem
 					line-height: 1
 	
-	header		
+	header
 		.header-content
-			grid-template-columns: 30px repeat(2, 1fr) 30px
-			grid-template-areas: ". search_bar search_bar ." "bg_img1 bg_img1 advantages advantages"
-			display: none !important
+			grid-template-columns: $main_gutter_s 1fr $main_gutter_s
+			grid-template-areas: ". search_bar ." "advantages advantages advantages"			
+			height: calc(100% - $nav_header_height_s)
 
 			.search_bar
-				grid-area: search_bar
-				width: 100%
-				padding: 0 0 20px
-
-				&-heading
-					&-1,
-					&-2
-						font-size: 4rem
-						line-height: 5rem
-
-				&-nav
-					margin:
-						top: 20px
-						bottom: 20px
+				padding: 0 0 $main_gutter_s
 
 				&-form
-					grid-template-columns: repeat(2, 1fr)
-					grid-column-gap: 30px
-					grid-row-gap: 15px
+					grid-row-gap: $main_gutter_s
 
-					#number_of_persons_choice
-						margin:
-							top: 10px
-							bottom: 20px
+					#search_bar-form-submit-btn
+						font-weight: 400
 						
 			.advantages
-				gap: 20px
-				padding: 7.5% 30px
+				gap: 15px
+				padding: $main_gutter_s
+				align-items: center
 
 				&-item
 					font-size: 1.8rem
-
+					font-weight: 400
+					width: 300px
+					gap: 15px
+					
 					&-icon
-						width: 38px
-						height: 38px
+						width: 30px
+						height: 30px
 
 	.flash_deals
 		padding: $section_gutter_y_md 30px
 		gap:30px
-		display: none !important
 
 		.carousel
 			&-content
